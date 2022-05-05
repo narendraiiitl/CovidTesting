@@ -1,0 +1,38 @@
+#nav {
+  color: black;
+  justify-content: center;
+}
+.title {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+  color: rgb(99, 60, 255);
+}
+.title:hover {
+  color: rgb(99, 60, 255) !important;
+}
+.subtitle:hover {
+  color: rgb(255, 163, 101) !important;
+}
+.subtitle {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: rgb(255, 163, 101);
+}
+.navbar {
+  margin-left: 0rem;
+}
+
+.footer__content__copyright {
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 15px;
+  padding-bottom: 5px;
+  background-color: rgb(18, 16, 16);
+  padding-top: 5px;
+  text-align: center;
+  color: #ffffff;
+}
