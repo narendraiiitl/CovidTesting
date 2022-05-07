@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>CodePen - Drag &amp; Drop File Upload Interaction</title>
+    <link rel="stylesheet" href="./uploadstyle.css" />
+  </head>
+  <body>
+    <!-- partial:index.partial.html -->
+    <div class="drag-drop-wrapper">
+      <form>
+        <input type="file" class="file-dialog" multiple />
+      </form>
+      <div class="drag-drop">
+        <div class="drag-drop-area">
+          <svg width="81.823" height="71.434" viewBox="0 0 81.823 71.434">
+            <g id="Folder" transform="translate(-531.896 -391)">
+              <g id="folder-blank" transform="translate(531.989 391)">
+                <g>
+                  <path
+                    d="M81.638,49.858V95.78a7.656,7.656,0,0,1-7.654,7.654H7.654A7.656,7.656,0,0,1,0,95.78V39.654A7.656,7.656,0,0,1,7.654,32H33.166l10.2,10.2H73.985A7.656,7.656,0,0,1,81.638,49.858Z"
+                    transform="translate(0 -32)"
+                    fill="#3b49b5"
+                  />
+                </g>
+              </g>
+              <g id="Papers" transform="translate(-2 3)">
+                <rect
+                  width="43"
+                  height="57"
+                  rx="2"
+                  transform="matrix(0.998, -0.07, 0.07, 0.998, 538.872, 398.786)"
+                  fill="#d5d5d5"
+                />
+                <rect
+                  width="43"
+                  height="57"
+                  rx="2"
+                  transform="translate(554.329 396.131) rotate(3)"
+                  fill="#ebebeb"
+                />
+                <rect
+                  width="43"
+                  height="57"
+                  rx="2"
+                  transform="matrix(0.995, -0.105, 0.105, 0.995, 562.946, 400.62)"
+                  fill="#fff"
+                />
+              </g>
+              <rect
+                width="81.823"
+                height="55.141"
+                rx="8"
+                transform="translate(531.896 407.151)"
+                fill="#4c5ff9"
+              />
+            </g>
+          </svg>
+          <div class="drag-drop-area-text">
+            Drag your documents, photos, or videos here to start uploading.
+          </div>
+          <div class="drag-drop-area-separator">OR</div>
+          <button class="drag-drop-area-button">Browse files</button>
+        </div>
+      </div>
+      <div class="drag-drop-progress">
+        <div class="drag-drop-progress-loader">
+          <div class="drag-drop-progress-loader-thumb"></div>
+        </div>
+      </div>
+    </div>
+    <!-- partial -->
+    <script src="./uploadscript.js"></script>
+  </body>
+</html>

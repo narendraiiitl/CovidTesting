@@ -16,21 +16,13 @@
       integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
       crossorigin="anonymous"
     />
-    <script
-      src="../code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="../cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
+
     <script
       src="../stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
       integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
       crossorigin="anonymous"
     ></script>
+    <script src="./uploadscript.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com/" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap"
@@ -53,23 +45,13 @@ http://www.templatemo.com/tm-517-timeless
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="./uploadstyle.css" />
     <!-- https://getbootstrap.com/ -->
     <!-- <link rel="stylesheet" href="css/templatemo-style.css" /> -->
     <!-- Templatemo style -->
-    <script type="text/javascript">
-      function msgprint() {
-        alert("You are Successfully Called the JavaScript function");
-      }
-    </script>
-    <meta name="google-signin-scope" content="profile email" />
-    <meta
-      name="google-signin-client_id"
-      content="YOUR_CLIENT_ID.apps.googleusercontent.com"
-    />
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
   </head>
 
-  <body style="background-color: #fcfcfc">
+  <body>
     <nav class="navbar">
       <div class="container" id="nav" style="text-align: center">
         <div>
@@ -88,46 +70,98 @@ http://www.templatemo.com/tm-517-timeless
         </div>
       </div>
     </nav>
-
-    <div class="section__header__main">
-      <p>
-        Perform Perfect Pathology with
-        <span class="logo__color">caMicroscope</span>
-      </p>
-      <p class="section__content__main">
-        caMicroscope is truly free, scalable web-based biomedical image and data
-        viewer, with strong emphasis for applications in cancer pathology.
-      </p>
-      <div style="margin-top: 12px">
-        <div
-          class="g-signin2"
-          data-onsuccess="onSignIn"
-          data-theme="dark"
-        ></div>
+    <div class="parent">
+      <div class="child1">
+        <div class="section__header__main">
+          <p>
+            Perform Perfect Pathology with
+            <span class="logo__color">caMicroscope</span>
+          </p>
+          <p class="section__content__main">
+            caMicroscope is truly free, scalable web-based biomedical image and
+            data viewer, with strong emphasis for applications in cancer
+            pathology.
+          </p>
+          <div
+            style="
+              margin-top: 12px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            "
+          ></div>
+        </div>
+      </div>
+      <div class="child2">
+        <div class="drag-drop-wrapper">
+          <form>
+            <input type="file" class="file-dialog" multiple />
+          </form>
+          <div class="drag-drop">
+            <div class="drag-drop-area">
+              <svg width="81.823" height="71.434" viewBox="0 0 81.823 71.434">
+                <g id="Folder" transform="translate(-531.896 -391)">
+                  <g id="folder-blank" transform="translate(531.989 391)">
+                    <g>
+                      <path
+                        d="M81.638,49.858V95.78a7.656,7.656,0,0,1-7.654,7.654H7.654A7.656,7.656,0,0,1,0,95.78V39.654A7.656,7.656,0,0,1,7.654,32H33.166l10.2,10.2H73.985A7.656,7.656,0,0,1,81.638,49.858Z"
+                        transform="translate(0 -32)"
+                        fill="#3b49b5"
+                      />
+                    </g>
+                  </g>
+                  <g id="Papers" transform="translate(-2 3)">
+                    <rect
+                      width="43"
+                      height="57"
+                      rx="2"
+                      transform="matrix(0.998, -0.07, 0.07, 0.998, 538.872, 398.786)"
+                      fill="#d5d5d5"
+                    />
+                    <rect
+                      width="43"
+                      height="57"
+                      rx="2"
+                      transform="translate(554.329 396.131) rotate(3)"
+                      fill="#ebebeb"
+                    />
+                    <rect
+                      width="43"
+                      height="57"
+                      rx="2"
+                      transform="matrix(0.995, -0.105, 0.105, 0.995, 562.946, 400.62)"
+                      fill="#fff"
+                    />
+                  </g>
+                  <rect
+                    width="81.823"
+                    height="55.141"
+                    rx="8"
+                    transform="translate(531.896 407.151)"
+                    fill="#4c5ff9"
+                  />
+                </g>
+              </svg>
+              <div class="drag-drop-area-text">
+                Drag your documents, photos, or videos here to start uploading.
+              </div>
+              <div class="drag-drop-area-separator">OR</div>
+              <button class="drag-drop-area-button">Browse files</button>
+            </div>
+          </div>
+          <div class="drag-drop-progress">
+            <div class="drag-drop-progress-loader">
+              <div class="drag-drop-progress-loader-thumb"></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <div class="footer__background__color">
-      <div class="footer__content__copyright"></div>
+      <div class="footer__content__copyright" id="footer"></div>
     </div>
     <script src="js/navbar-responsive.js"></script>
     <script src="js/footer.js"></script>
   </body>
-  <script>
-    function onSignIn(googleUser) {
-      // Useful data for your client-side scripts:
-      var profile = googleUser.getBasicProfile();
-      console.log("ID: " + profile.getId()); // Don't send this directly to your server!
-      console.log("Full Name: " + profile.getName());
-      console.log("Given Name: " + profile.getGivenName());
-      console.log("Family Name: " + profile.getFamilyName());
-      console.log("Image URL: " + profile.getImageUrl());
-      console.log("Email: " + profile.getEmail());
-
-      // The ID token you need to pass to your backend:
-      var id_token = googleUser.getAuthResponse().id_token;
-      console.log("ID Token: " + id_token);
-    }
-  </script>
-  <!-- Mirrored from camicroscope.github.io/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 05 May 2022 13:47:25 GMT -->
 </html>
