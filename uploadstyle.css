@@ -94,6 +94,15 @@ button {
 }
 .drag-drop-wrapper .drag-drop-list-element{
   margin: 8px 0;
+  display: flex;
+}
+.drag-drop-list-element button{
+  background: transparent;
+  box-shadow: none;
+  border: none;
+}
+.drag-drop-list-element .drag-drop-list-element-text{
+  flex-grow: 1;
 }
 .drag-drop-wrapper .drag-drop-area-text {
   margin-top: 20px;
