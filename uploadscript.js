@@ -1,6 +1,17 @@
+const files={}
+function onClick(id){
+  const dragDropList = document.getElementById("drag-drop-list");
+  if(id)  delete files[id];
+  let html="";
+  const keys=Object.keys(files);
+  for(let i=0;i<keys.length;i++){
+    html+='<div class="drag-drop-list-element">' + files[keys[i]].name +`<button onclick="onClick(${files[keys[i]].lastModified})">X</button></div>\n`
+  }
+  dragDropList.innerHTML=html;
+}
 window.addEventListener("DOMContentLoaded", () => {
   const dragDropAreas = document.getElementsByClassName("drag-drop-area");
-
+  const dragDropList = document.getElementById("drag-drop-list");
   for (let area of dragDropAreas) {
     let parentEl = area.parentElement.parentElement;
     let progressThumb = parentEl.querySelector(
@@ -68,8 +79,14 @@ window.addEventListener("DOMContentLoaded", () => {
     uploadBtn.addEventListener("click", () => {
       fileDialog.click();
     });
+
     fileDialog.addEventListener("change", () => {
       onUploadFiles(fileDialog.files);
-    });
+      for (let i = 0; i < fileDialog.files.length; i++) files[fileDialog.files[i].lastModified] = fileDialog.files[i];
+      onClick();
+    })
+
+
+
   }
 });
